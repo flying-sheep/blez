@@ -173,7 +173,7 @@ async fn main() -> Result<()> {
         stdout(),
         terminal::Clear(ClearType::All),
         cursor::MoveTo(0, 0),
-        style::Print(format!("Discovering devices using Bluetooth adapater {}", adapter_name.clone().blue()))
+        style::Print(format!("Discovering devices using Bluetooth adapter {}", adapter_name.clone().blue()))
     )
     .unwrap();
 

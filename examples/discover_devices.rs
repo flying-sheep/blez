@@ -27,7 +27,7 @@ async fn main() -> blez::Result<()> {
     let session = blez::Session::new().await?;
     let adapter_names = session.adapter_names().await?;
     let adapter_name = adapter_names.first().expect("No Bluetooth adapter present");
-    println!("Discovering devices using Bluetooth adapater {}\n", &adapter_name);
+    println!("Discovering devices using Bluetooth adapter {}\n", &adapter_name);
     let adapter = session.adapter(&adapter_name)?;
 
     let device_events = adapter.discover_devices().await?;
